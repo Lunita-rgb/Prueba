@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Salario</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url("https://i.pinimg.com/236x/51/af/45/51af457aac02a77454910ba07c4fe0f6.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        input, button {
+            padding: 10px;
+            margin: 15px 0;
+            width: 130px;
+        }
+        #resultado {
+            margin-top: 30px;
+            font-weight: bold;
+        }
+        .menu {
+            width: 200px;
+            background-color: #C99385;
+            height: 100vh;
+            position: fixed;
+            padding-top: 0;
+        }
+        .menu a {
+            padding: 20px;
+            text-decoration: none;
+            color: white;
+            display: block;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .menu a:hover {
+            background-color: #D6B3AA;
+            color: #FFFF;
+        }
+        .content {
+            margin-left: 220px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+  <div class="menu">
+      <a href="PaginaPrincipal.html"><font face="Cambria Italic" size="4"><i>Inicio</i></font></a>
+      <a href="servicios.html"><font face="Cambria Italic" size="4"><i>Tus Derechos<i/></font></a>
+      <a href="sobre_nosotros.html"><font face="Cambria Italic" size="4"><i>Actividades</i></font></a>
+      <a href="MenúCalculadoras.html"><font face="Cambria Italic" size="4"><i>Calculadora Laboral</i></font></a>
+  </div>
+
+    <div class="content">
+        <center>
+            <h1><font face="Cambria Italic" size="6"><i>Calcula tu Sueldo/Salario</i></font></h1>
+            <p>Ingresa tu número de días trabajados para multiplicarlo por el salario mínimo de México (2024: $248.93)</p>
+            <input type="number" id="entrada" placeholder="Ingresa un número" />
+            <button onclick="calcularSalario()">Calcular</button>
+            <div id="resultado"></div>
+        </center>
+    </div>
+  
+    <script>
+        const salarioMinimo = 248.93; // Salario mínimo diario en pesos para 2024
+
+        function calcularSalario() {
+            const entrada = document.getElementById('entrada').value;
+            const resultado = entrada * salarioMinimo;
+
+            document.getElementById('resultado').innerText = `Por ${entrada} día(s) laborados deberías recibir: $${resultado.toFixed(2)} pesos.`;
+
+          }
+    </script>
+</body>
+</html>
