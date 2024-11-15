@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayuda Laboral en México</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        h1 {
+            color: #0056b3;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ayuda para Problemas Laborales en México</h1>
+    <p>Encuentra recursos para proteger tus derechos laborales de acuerdo con la Ley Federal del Trabajo y la Constitución Mexicana.</p>
+    <ul>
+        <li>
+            <a href="https://www.gob.mx/profedet" target="_blank">
+                Procuraduría Federal de la Defensa del Trabajo (PROFEDET)
+            </a>
+            <p>Ofrece orientación gratuita, asesoría y representación legal para trabajadores.</p>
+        </li>
+        <li>
+            <a href="https://www.gob.mx/stps" target="_blank">
+                Secretaría del Trabajo y Previsión Social (STPS)
+            </a>
+            <p>Información sobre derechos laborales, inspecciones de trabajo y denuncias.</p>
+        </li>
+        <li>
+            <a href="https://www.gob.mx/cndh" target="_blank">
+                Comisión Nacional de los Derechos Humanos (CNDH)
+            </a>
+            <p>Presenta quejas si consideras que tus derechos humanos han sido vulnerados en el ámbito laboral.</p>
+        </li>
+        <li>
+            <a href="https://www.gob.mx/infonavit" target="_blank">
+                Instituto del Fondo Nacional de la Vivienda para los Trabajadores (INFONAVIT)
+            </a>
+            <p>Conoce tus derechos relacionados con créditos de vivienda.</p>
+        </li>
+        <li>
+            <a href="https://borde.mx/tu-guia-laboral" target="_blank">
+                Guía Laboral por El Borde
+            </a>
+            <p>Herramienta para identificar violaciones a tus derechos laborales de forma sencilla.</p>
+        </li>
+    </ul>
+    <footer>
+        <p>&copy; 2024 - Recursos Laborales en México. Protege tus derechos.</p>
+    </footer>
+</body>
+</html>
