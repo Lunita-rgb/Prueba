@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuadro de antiguedad</title>
+    <style>
+        body {
+            background-color: black;
+            color: rgb(0, 0, 0);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .recuadro {
+            width: 80%;
+            max-width: 600px;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .recuadro-rosa {
+            background-color: pink;
+        }
+
+        .recuadro-rosa-opaco {
+            background-color: #ff99cc;
+        }
+
+        .recuadro h2 {
+            margin: 0 0 10px;
+        }
+
+        .boton {
+            background-color: white;
+            color: black;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 14px;
+            display: inline-block;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .boton:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Recuadro Rosa -->
+    <div class="recuadro recuadro-rosa">
+        <h2>¿Que es?</h2>
+        <p>La antigüedad laboral es el tiempo que un
+        trabajador ha permanecido en una empresa, desde que firmó su primer contrato hasta la fecha en que terminó su relación laboral.</p>
+        <h2>¿Cual es la importancia de elaborarlo?</h2>
+        <p>El reconocimiento de tu patron del tiempo que se lleva laborando es un derecho basico de acuerdo con lo establecido en tu Contratos.
+        </p>
+    </div>
+
+    <!-- Recuadro Rosa Opaco -->
+    <div class="recuadro recuadro-rosa-opaco">
+        <h2>Tipos de antiguedad</h2>
+        <p>Antiguedad de empresa o generica: Se entiende por antiguedad de tiempo en el que el trabajador ha prestado servicios
+        para una empresa determinada sin solucion de continuidad, en caso de existir una diversidad de contratos no siempre
+        probara la existencia de relaciones laborales.</p>
+        <p>Antiguedad de categoria: Este indicador permite definir para cada categoria una escala de antecedentes de 
+        antiguedad que sera aplicable a todos los trabajadores que tengan asignados el codigo de categoria.</p>
+        <a href="LFT.pdf#page=50" class="boton">Ley Federal del Trabajo</a>
+    </div>
+</body>
+</html>
