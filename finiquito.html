@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body {
+            background-color: black;
+            color: rgb(0, 0, 0);
+            font-family: italic;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .recuadro {
+            width: 80%;
+            max-width: 600px;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .recuadro-rosa {
+            background-color: pink;
+        }
+
+        .recuadro-rosa-opaco {
+            background-color: #ff99cc;
+        }
+
+        .recuadro h2 {
+            margin: 0 0 10px;
+        }
+
+        .boton {
+            background-color: white;
+            color: black;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 14px;
+            display: inline-block;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .boton:hover {
+            background-color: #e0e0e0;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+        }
+
+        .header-buttons {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .header-buttons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: white;
+            background-color: pink;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .header-buttons a:hover {
+            background-color: #ff99cc;
+        }
+
+        .arrow-button::before {
+            content: "←";
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-buttons">
+        <!-- Botón con forma de flecha -->
+        <a href="TUBOTONDELINK.html" class="arrow-button">Volver</a>
+
+        <!-- Botón Inicio -->
+        <a href="TULINKDEINICIO.html">Inicio</a>
+    </div>
+
+    <div class="recuadro recuadro-rosa">
+        <h2></h2>
+        <p></p>
+    </div>
+
+    <div class="recuadro recuadro-rosa-opaco">
+        <h2></h2>
+        <p></p>
+        <a href="LFT.pdf#page=25" class="boton">Ley Federal del Trabajo</a>
+    </div>
+</body>
+</html>
