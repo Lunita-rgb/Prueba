@@ -24,6 +24,9 @@
             margin: 20px 0;
             border-radius: 10px;
             text-align: center;
+            color: rgb(0, 0, 0);
+            font-family: italic;
+
         }
 
         .recuadro-rosa {
@@ -53,19 +56,68 @@
         .boton:hover {
             background-color: #e0e0e0;
         }
+
+        
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+        }
+
+        .header-buttons {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .header-buttons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            background-color: pink;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .header-buttons a:hover {
+            background-color: #ff99cc;
+        }
+
+        .arrow-button::before {
+            content: "←";
+            margin-right: 5px;
+        }
     </style>
 </head>
 <body>
+    <div class="header-buttons">
+        <!-- Botón con forma de flecha -->
+        <a href="Derechos.html" class="arrow-button">Volver</a>
+
+        <!-- Botón Inicio -->
+        <a href="PaginaPrincipal.html">Inicio</a>
+    </div>
 
     <div class="recuadro recuadro-rosa">
-        <h2></h2>
-        <p></p>
+        <h2><i>¿Que es?</i></h2>
+        <p>Las personas trabajadoras que tengan más de un año de servicios disfrutarán de un periodo anual de vacaciones pagadas,
+             que en ningún caso podrá ser inferior a doce días laborables, y que aumentará en dos días laborables, hasta llegar a veinte
+             , por cada año subsecuente de servicios. asimismo durante las vacaciones se daara un pago adicional al salario del empleado
+              para que disfrute de sus días libres llamado prima vacacional.</p>
     </div>
 
     <div class="recuadro recuadro-rosa-opaco">
         <h2></h2>
         <p></p>
-        <a href="LFT.pdf#page=25" class="boton">Ley Federal del Trabajo</a>
+        <a href="LFT.pdf#page=23" class="boton">Ley Federal del Trabajo</a>
     </div>
 </body>
 </html>
