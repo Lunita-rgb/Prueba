@@ -54,9 +54,55 @@
         .boton:hover {
             background-color: #e0e0e0;
         }
+
+        
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+        }
+
+        .header-buttons {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .header-buttons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            background-color: pink;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .header-buttons a:hover {
+            background-color: #ff99cc;
+        }
+
+        .arrow-button::before {
+            content: "←";
+            margin-right: 5px;
+        }
     </style>
 </head>
 <body>
+    <div class="header-buttons">
+        <!-- Botón con forma de flecha -->
+        <a href="Derechos.html" class="arrow-button">Volver</a>
+
+        <!-- Botón Inicio -->
+        <a href="PaginaPrincipal.html">Inicio</a>
+    </div>
     <!-- Recuadro Rosa -->
     <div class="recuadro recuadro-rosa">
         <h2><i>¿Que es?</i></h2>
