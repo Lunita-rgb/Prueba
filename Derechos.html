@@ -30,6 +30,7 @@
             padding: 20px;
             text-align: center;
             position: relative;
+            font-family: italic;
         }
 
         .ver-mas {
@@ -50,12 +51,56 @@
             background-color: rgb(199, 114, 128);
             color: white;
         }
+        
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+        }
+
+        .header-buttons {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .header-buttons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            background-color: pink;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .header-buttons a:hover {
+            background-color: #ff99cc;
+        }
+
+        .arrow-button::before {
+            content: "←";
+            margin-right: 5px;
+        }
     </style>
 
 </head>
 
 
 <body>
+    <div class="header-buttons">
+    
+        <a href="PaginaPrincipal.html">Inicio</a>
+    
+    </div>
+
     <div class="container">
        
         <div class="recuadro">
