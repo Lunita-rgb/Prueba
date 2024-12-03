@@ -5,6 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tiempo Extraordinario</title>
     <style>
+    table {
+border-collapse: collapse;
+width: 100%;
+}
+
+th, td {
+text-align: left;
+padding: 8px;
+}
+
+tr:nth-child(even) {
+background-color: #D6EEEE;
+}
+a:link {
+color: coral;
+background-color: transparent;
+text-decoration: none;
+}
+a:visited {
+color: coral;
+background-color: transparent;
+text-decoration: none;
+}
+a:hover {
+color: red;
+background-color: transparent;
+text-decoration: underline;
+}
+a:active {
+color: coral;
+background-color: transparent;
+text-decoration: underline;
+}
+
+table {
+border-collapse: collapse;
+width: 100%;
+}
+
+       th, td {
+       text-align: left;
+       padding: 8px;
+      }
+
+        tr:nth-child(even) {
+        background-color: #FFC999;
+        }
+         tr:hover {background-color: #D6EEEE;}
         body {
             background-color: black;
             color: rgb(0, 0, 0);
@@ -19,8 +67,8 @@
         }
 
         .recuadro {
-            width: 80%;
-            max-width: 600px;
+            width: 100%;
+            max-width: 800px;
             padding: 20px;
             margin: 20px 0;
             border-radius: 10px;
@@ -31,6 +79,7 @@
 
         .recuadro-rosa {
             background-color: pink;
+
         }
 
         .recuadro-rosa-opaco {
@@ -56,7 +105,7 @@
         .boton:hover {
             background-color: #e0e0e0;
         }
-        
+
         body {
             margin: 0;
             font-family: Arial, sans-serif;
@@ -90,31 +139,56 @@
             background-color: #ff99cc;
         }
 
-        .arrow-button::before {
-            content: "←";
-            margin-right: 5px;
-        }
     </style>
 </head>
 <body>
     <div class="header-buttons">
         <!-- Botón con forma de flecha -->
-        <a href="Derechos.html" class="arrow-button">Volver</a>
-    
+        <a href="Derechos.html">
+          <img src="na.png" alt="Back" width="30" height="30" style="vertical-align: middle; "></a>
+
         <!-- Botón Inicio -->
-        <a href="PaginaPrincipal.html">Inicio</a>
+        <a href="PaginaPrincipal.html">
+  <img src="yop.png" alt="Inicio" alt="Inicio" width="30" height="30" style="vertical-align: middle;">
+  Inicio
+</a>
 
         </div>
 
-    <div class="recuadro recuadro-rosa">
-        <h2><i>¿Que es?</i></h2>
-        <p>Una vez cumplida tu jornada laboral cualquier tiempo excedente se debera pagar con un monto extra en tu sueldo/salario 
-        dependiendo las cantidad de horas extra que hayas realizado.</p>
-        <li>Se abonara como salario por el tiempo excedente.</li>
-        <li>El aumento sera del 100% mas de lo fijado por horas normales.</li>
-        <li>No se podra exceder de 3 horas diarias.</li>
-        <li>No se podra exceder de 3 veces consecutivas.</li>
-    </div>
+
+        <div class="recuadro recuadro-rosa">
+          <h2><i>¿Qué es?</i></h2>
+          <p>Una vez cumplida tu jornada laboral cualquier tiempo excedente se deberá pagar con un monto extra en tu sueldo/salario dependiendo de las cantidad de horas extra que hayas realizado.</p>
+          <ul>
+              <li>Se abonará como salario por el tiempo excedente.</li>
+              <li>El aumento será del 100% más de lo fijado por horas normales.</li>
+              <li>No se podrá exceder de 3 horas diarias.</li>
+              <li>No se podrá exceder de 3 veces consecutivas.</li>
+          </ul>
+          <table>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>Hora extra simple</td>
+                    <td>4 enero 2010</td>
+                    <td>----</td>
+                </tr>
+                <tr>
+                    <td>Hora extra doble</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Hora extra triple</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+          </table>
+      </div>
+
 
     <div class="recuadro recuadro-rosa-opaco">
         <h2><i>Prolongacion de la jornada por situaciones adversas</i></h2>
