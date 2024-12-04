@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Finiquito</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #DFD0CD;
+        }
+        input, button {
+            padding: 10px;
+            margin: 5px 0;
+            width: 250px;
+        }
+        #resultado {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .menu {
+            width: 200px;
+            background-color: #C99385;
+            height: 100vh;
+            position: fixed;
+            padding-top: 20px;
+        }
+        .menu a {
+            padding: 15px;
+            text-decoration: none;
+            color: white;
+            display: block;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .menu a:hover {
+            background-color: #D6B3AA;
+            color: #FFFF;
+        }
+        .content {
+            margin-left: 220px; /* Espacio para el menú */
+            padding: 20px;
+        }
+        /* Estilos para el cuadro de diálogo */
+        .modal {
+            display: none; /* Oculto por defecto */
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .modal-content {
+            background-color: white;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            text-align: center;
+        }
+        .modal img {
+            max-width: 100px; /* Ajustar el tamaño de la imagen */
+            margin-bottom: 10px;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <a href="PaginaPrincipal.html"><font face="Cambria Italic" size="4"><i>Inicio</i></font></a>
+        <a href="Derechos.html"><font face="Cambria Italic" size="4"><i>Tus Derechos<i/></font></a>
+        <a href="sobre_nosotros.html"><font face="Cambria Italic" size="4"><i>Actividades</i></font></a>
+        <a href="MenúCalculadoras.html"><font face="Cambria Italic" size="4"><i>Calculadora Laboral</i></font></a>
+    </div>
+
+    <div class="content">
+        <center>
+            <h1><font face="Cambria Italic" size="6"><i>Calculadora de Finiquito</i></font></h1>
+            <p><i>Por favor, ingresa la información solicitada para calcular tu finiquito:</i></p>
+
+            <form id="finiquitoForm">
+                Fecha de ingreso: <input type="date" id="fechaIngreso" required><br>
+                Fecha de baja: <input type="date" id="fechaBaja" required><br>
+                Días de aguinaldo por año: <input type="number" id="diasAguinaldo" placeholder="Ejemplo: 15" required><br>
+                Prima vacacional (%): <input type="number" id="primaVacacional" placeholder="Ejemplo: 25" required><br>
+                Días de vacaciones por año: <input type="number" id="diasVacacionesAnuales" placeholder="Ejemplo: 6" required><br>
+                Días de vacaciones pendientes: <input type="number" id="diasVacacionesPendientes" placeholder="Ejemplo: 5" required><br>
+                Salario diario: <input type="number" id="salarioDiario" placeholder="Ejemplo: 200" required><br>
+                Días de salario pendiente: <input type="number" id="diasSalarioPendiente" placeholder="Ejemplo: 3" required><br>
+                <button type="button" onclick="calcularFiniquito()">Calcular</button>
+            </form>
+
+            <div id="resultado"></div>
+        </center>
+    </div>
+
+    <!-- Cuadro de diálogo personalizado -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal()">&times;</span>
+            <img src="https://i.pinimg.com/originals/6f/0e/36/6f0e366783c9304c93c80021d16aaf09.jpg" alt="Alerta" />
+            <p><font face="Cambria Italic" size="4"><i>Recuerda verificar tus cálculos y que todos los datos sean correctos.</i></font></p>
+        </div>
+    </div>
+
+    <script>
+        function calcularFiniquito() {
+            const fechaIngreso = new Date(document.getElementById('fechaIngreso').value);
+            const fechaBaja = new Date(document.getElementById('fechaBaja').value);
+            const diasAguinaldo = parseFloat(document.getElementById('diasAguinaldo').value);
+            const primaVacacional = parseFloat(document.getElementById('primaVacacional').value) / 100;
+            const diasVacacionesAnuales = parseFloat(document.getElementById('diasVacacionesAnuales').value);
+            const diasVacacionesPendientes = parseFloat(document.getElementById('diasVacacionesPendientes').value);
+            const salarioDiario = parseFloat(document.getElementById('salarioDiario').value);
+            const diasSalarioPendiente = parseFloat(document.getElementById('diasSalarioPendiente').value);
+
+            // Cálculo de días trabajados
+            const tiempoTrabajado = (fechaBaja - fechaIngreso) / (1000 * 60 * 60 * 24);
+            const añosTrabajados = tiempoTrabajado / 365;
+
+            // Cálculo del finiquito
+            const aguinaldoProporcional = (diasAguinaldo / 365) * tiempoTrabajado * salarioDiario;
+            const vacacionesPendientes = diasVacacionesPendientes * salarioDiario;
+            const primaVacacionalPendiente = vacacionesPendientes * primaVacacional;
+            const salarioPendiente = diasSalarioPendiente * salarioDiario;
+
+            const totalFiniquito = aguinaldoProporcional + vacacionesPendientes + primaVacacionalPendiente + salarioPendiente;
+
+            document.getElementById('resultado').innerHTML = `
+                <p>Aguinaldo proporcional: $${aguinaldoProporcional.toFixed(2)}</p>
+                <p>Vacaciones pendientes: $${vacacionesPendientes.toFixed(2)}</p>
+                <p>Prima vacacional: $${primaVacacionalPendiente.toFixed(2)}</p>
+                <p>Salario pendiente: $${salarioPendiente.toFixed(2)}</p>
+                <h3>Total del finiquito: $${totalFiniquito.toFixed(2)}</h3>
+            `;
+
+            mostrarModal();
+        }
+
+        function mostrarModal() {
+            document.getElementById('myModal').style.display = "block";
+        }
+
+        function cerrarModal() {
+            document.getElementById('myModal').style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('myModal');
+            if (event.target === modal) {
+                cerrarModal();
+            }
+        }
+    </script>
+</body>
+</html>
