@@ -113,7 +113,7 @@
         <div class="modal-content">
             <span class="close" onclick="cerrarModal()">&times;</span>
             <img src="https://i.pinimg.com/originals/6f/0e/36/6f0e366783c9304c93c80021d16aaf09.jpg" alt="Alerta" />
-            <p><font face="Cambria Italic" size="4"><i>Recuerda verificar tus cálculos y que todos los datos sean correctos.</i></font></p>
+            <p><font face="Cambria Italic" size="4"><i>Recuerda verificar si no tienes alguna adueudo que tengas penidente.</i></font></p>
         </div>
     </div>
 
@@ -133,7 +133,7 @@
             const añosTrabajados = tiempoTrabajado / 365;
 
             // Cálculo del finiquito
-            const aguinaldoProporcional = (diasAguinaldo / 365) * tiempoTrabajado * salarioDiario;
+            const aguinaldoProporcional = diasAguinaldo * salarioDiario * añosTrabajados;
             const vacacionesPendientes = diasVacacionesPendientes * salarioDiario;
             const primaVacacionalPendiente = vacacionesPendientes * primaVacacional;
             const salarioPendiente = diasSalarioPendiente * salarioDiario;
