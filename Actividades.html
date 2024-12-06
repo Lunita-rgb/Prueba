@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Derecho Laboral</title>
+    <style>
+        body {
+          font-family: Cambria Italic, sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #000000; /* Color de fondo de la página */
+        }
+
+        /* Estilo para el menú */
+        .menu {
+          width: 200px;
+          background-color: #C99385;
+          position: fixed;
+          top: 0;
+          left: 0;
+          height: 100vh; /* Menú de altura completa */
+          padding-top: 20px;
+          box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2); /* Sombra para el menú */
+        }
+
+        /* Estilo para los enlaces del menú */
+        .menu a {
+            padding: 15px;
+            text-decoration: none;
+            color: white;
+            display: block;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Efecto hover sobre los enlaces */
+        .menu a:hover {
+            background-color: #D6B3AA;
+            color: #FFFF; /* Cambia el color del texto */
+        }
+
+        /* Estilo para el contenido */
+        .content {
+            margin-left: 220px; /* Deja espacio para el menú */
+            padding: 20px;
+            /* Se elimina el fondo para los ejercicios */
+            background-color: transparent; /* Fondo transparente */
+        }
+
+        /* Caja de contenido con borde y fondo blanco */
+        .content-box {
+            border: 2px solid #D6B3AA;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: #FFFFFF;
+            color: #000000;
+            max-width: 800px;
+            margin: 20px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Títulos dentro de la caja de contenido */
+        .content-box h1 {
+            margin: 0;
+            color: #D30000;
+            text-align: center;
+            font-family: "Cambria Italic", serif;
+        }
+
+        /* Estilo para los párrafos */
+        .content-box p {
+            margin-top: 10px;
+            font-size: 18px;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        /* Títulos generales */
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        /* Estilo para las tablas */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        /* Estilo para los campos de entrada de número */
+        input[type="number"] {
+            width: 80px;
+            padding: 5px;
+            text-align: center;
+        }
+
+        /* Estilo para los botones */
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Estilo para la retroalimentación */
+        .answer {
+            font-size: 1.1em;
+            margin-top: 10px;
+        }
+
+        .correct {
+            color: green;
+        }
+
+        .incorrect {
+            color: red;
+        }
+    </style>
+</head>
+<body background="https://i.pinimg.com/564x/21/9a/3d/219a3da8bbd8803f83bb0b734131d715.jpg">
+
+<!-- Menú lateral -->
+<div class="menu">
+    <a href="PaginaPrincipal.html"><font face="Cambria Italic" size="4"><i>Inicio</i></font></a>
+    <a href="Derechos.html"><font face="Cambria Italic" size="4"><i>Tus Derechos</i></font></a>
+    <a href="MenúCalculadoras.html"><font face="Cambria Italic" size="4"><i>Calcula tus Prestaciones</i></font></a>
+    <a href="Noticias.html"><font face="Cambria Italic" size="4"><i>Noticias</i></font></a>
+    <a href="Actividades.html"><font face="Cambria Italic" size="4"><i>¡Practica!</i></font></a>
+    <a href="contactos.html"><font face="Cambria Italic" size="4"><i>Contactos</i></font></a>
+</div>
+
+<!-- Contenido principal -->
+<div class="content">
+    <h1><font color="#D30000" size="5" face="Cambria Italic"><i>Ejercicios para calcular horas extra</i></font></h1>
+    <h3><font color="#D30000" size="5" face="Cambria Italic"><i>1.Identifica los extras</i></font></h1>
+    <p><i>Complete las tablas con las horas trabajadas y las horas extra correspondientes. Luego, haga clic en "Comprobar" para verificar su respuesta.</i></p>
+    <br>
+    <br>
+    <!-- Ejercicio 1 -->
+    <h2>Ejercicio 1: Horas trabajadas en un día normal</h2>
+    <p>Un empleado trabaja 8 horas diarias. ¿Cuántas horas extra ha trabajado si su jornada laboral regular es de 8 horas?</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Día</th>
+                <th>Horas trabajadas</th>
+                <th>Horas extra</th>
+                <th>Comprobar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Lunes</td>
+                <td>8</td>
+                <td><input type="number" id="lunes-extra" placeholder="Horas extra"></td>
+                <td>0</td>
+                <td><button onclick="checkAnswer('lunes', 0)">Comprobar</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Ejercicio 2 -->
+    <h2>Ejercicio 2: Horas extra por trabajo adicional</h2>
+    <p>El miércoles, un empleado trabajó 10 horas. Su jornada laboral regular es de 8 horas. ¿Cuántas horas extra trabajó?</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Día</th>
+                <th>Horas trabajadas</th>
+                <th>Horas extra</th>
+                <th>Comprobar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Miércoles</td>
+                <td>10</td>
+                <td><input type="number" id="miercoles-extra" placeholder="Horas extra"></td>
+                <td>2</td>
+                <td><button onclick="checkAnswer('miercoles', 2)">Comprobar</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Ejercicio 3 -->
+    <h2>Ejercicio 3: Horas extra por trabajo en fin de semana</h2>
+    <p>El viernes, un empleado trabajó 9 horas. Su jornada laboral regular es de 8 horas. ¿Cuántas horas extra trabajó?</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Día</th>
+                <th>Horas trabajadas</th>
+                <th>Horas extra</th>
+                <th>Comprobar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Viernes</td>
+                <td>9</td>
+                <td><input type="number" id="viernes-extra" placeholder="Horas extra"></td>
+                <td>1</td>
+                <td><button onclick="checkAnswer('viernes', 1)">Comprobar</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+<script>
+    function checkAnswer(day, correctAnswer) {
+        var userAnswer = document.getElementById(day + '-extra').value;
+        var answerDiv = document.getElementById(day + '-extra');
+        var button = event.target;
+
+        if (userAnswer == correctAnswer) {
+            answerDiv.style.backgroundColor = "#d4edda"; // green background
+            button.textContent = "¡Correcto!";
+            button.disabled = true;
+            button.style.backgroundColor = "#28a745";
+        } else {
+            answerDiv.style.backgroundColor = "#f8d7da"; // red background
+            button.textContent = "¡Incorrecto!";
+            button.disabled = true;
+            button.style.backgroundColor = "#dc3545";
+        }
+    }
+</script>
+
+</body>
+</html>
